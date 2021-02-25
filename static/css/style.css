@@ -5,11 +5,22 @@ html, body {
     background-color: black;
 }
 
+.example::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
 body {
     font-family: "Helvetica Neue",sans-serif;
     font-weight: lighter;
     background-color: black;
     color: black;
+    overflow-x: hidden;
 }
 
 .carousel-item {
@@ -160,4 +171,55 @@ body {
   }
   .slick-arrow.slick-hidden {
       display: none;
+  }
+
+.logo-note{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50% ;
+    height: 10rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .logo-note{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40% !important;
+        height: 10rem;
+    }
+    .slide img{
+        height: 40rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:420px) and (min-width: 600px) {
+    .logo-note{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30% !important;
+        height: 10rem;
+    }
+}
+
+@media only screen and (max-width: 935px) and (min-width: 600px) {
+    .logo-note{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 16% !important;
+        height: 10rem;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .l,.r{
+        margin-bottom: 10%;
+        border-right: none !important;
+    }   
   }
